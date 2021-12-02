@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { Button } from 'react-bootstrap'
 
 const Counter = () => {
     const [counter, setCounter] = useState(0)
@@ -7,9 +9,9 @@ const Counter = () => {
     return (
         <div>
             <div>{counter}</div>
-            <button onClick={increment}>Increment</button>
-            <button onClick={decrement}>Decrement</button>
-            <button onClick={()=>setCounter(0)}>Reset</button>
+            <Button onClick={increment}>Increment</Button>
+            <Button onClick={decrement}>Decrement</Button>
+            <Button onClick={()=>setCounter(0)}>Reset</Button>
         </div>
     )
 }
