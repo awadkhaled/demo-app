@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { Button } from 'react-bootstrap'
+import { ButtonGroup, Button, Alert } from 'react-bootstrap'
 
 const Counter = () => {
     const [counter, setCounter] = useState(0)
@@ -8,10 +8,14 @@ const Counter = () => {
     const decrement = () => setCounter(prevCounter => prevCounter - 1)
     return (
         <div>
-            <div>{counter}</div>
-            <Button onClick={increment}>Increment</Button>
-            <Button onClick={decrement}>Decrement</Button>
-            <Button onClick={()=>setCounter(0)}>Reset</Button>
+            <Alert className="text-center">{counter}</Alert>
+            <div className="text-center">
+                <ButtonGroup>
+                    <Button onClick={increment}>Increment</Button>
+                    <Button onClick={decrement}>Decrement</Button>
+                    <Button onClick={() => setCounter(0)}>Reset</Button>
+                </ButtonGroup>
+            </div>
         </div>
     )
 }
