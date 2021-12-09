@@ -1,6 +1,6 @@
 import './css/App.css'
 import Counter from './pages/Counter'
-import Navigationbar from './components/Navigationbar'
+import Navigationbar from './components/organisms/Navigationbar'
 import Home from './pages/Home'
 import Login from './pages/Login'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'

@@ -1,9 +1,8 @@
-import 'bootstrap/dist/css/bootstrap.min.css'
-import { Alert } from 'react-bootstrap'
+import HomeTemplate from '../templates/Home'
 
 const Home = () => {
     return (
-        <Alert>Home</Alert>
+        <HomeTemplate />
     )
 }
 

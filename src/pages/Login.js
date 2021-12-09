@@ -1,9 +1,8 @@
-import 'bootstrap/dist/css/bootstrap.min.css'
-import { Alert } from 'react-bootstrap'
+import LoginTemplate from '../templates/Login'
 
 const Login = () => {
     return (
-        <Alert>Login</Alert>
+        <LoginTemplate/>
     )
 }
 
