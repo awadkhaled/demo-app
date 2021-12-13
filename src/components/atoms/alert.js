@@ -1,10 +1,11 @@
-import 'bootstrap/dist/css/bootstrap.min.css'
 import { Alert } from 'react-bootstrap'
 
-const AlertAtom = (props) => {
-    return (
-        <Alert>{props.content}</Alert>
-    )
-}
+const AlertAtom = (props) => <Alert
+    varient={props.varient}
+    transition={props.transition}
+    onClose={props.onClose}
+    dismissible={props.dismissible}>
+    {props.content}
+</Alert>
 
 export default AlertAtom

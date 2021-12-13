@@ -2,30 +2,27 @@ import './css/App.css'
 import Counter from './pages/Counter'
 import Navigationbar from './components/organisms/Navigationbar'
 import Home from './pages/Home'
-import Login from './pages/Login'
+import LoginPage from './pages/LoginPage'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import 'bootstrap/dist/css/bootstrap.min.css'
 import { Container } from 'react-bootstrap'
 
 function App() {
   return (
     <Router>
-      <Container >
         <Navigationbar/>
-        <div>
+        <Container>
           <Switch>
             <Route exact path='/'>
               <Home />
             </Route>
             <Route path='/login'>
-              <Login />
+              <LoginPage />
             </Route>
             <Route path='/counter'>
               <Counter />
             </Route>
           </Switch>
-        </div>
-      </Container>
+        </Container>
     </Router>
   )
 }
