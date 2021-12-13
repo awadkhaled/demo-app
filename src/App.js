@@ -20,7 +20,7 @@ function App() {
             </Route>
             <Route path='/counter'>
               <Counter />
-            </Route>
+          </Route>
           </Switch>
         </Container>
     </Router>

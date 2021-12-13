@@ -1,5 +1,6 @@
 import ButtonAtom from '../atoms/button'
 import { useTranslation } from 'react-i18next'
+import Nav from 'react-bootstrap/Navbar'
 
 const lngs = {
     en: { nativeName: 'English' },
@@ -9,7 +10,7 @@ const lngs = {
 const TranslationButtons = () => {
     const { t, i18n } = useTranslation()
     return (
-        <div>
+        <Nav>
             {Object.keys(lngs).map((lng) => (
                 <ButtonAtom key={lng}
                     style={{ fontWeight: i18n.resolvedLanguage === lng ? 'bold' : 'normal' }} type="submit"
@@ -17,7 +18,7 @@ const TranslationButtons = () => {
                     content={lngs[lng].nativeName}
                 />
             ))}
-        </div>
+        </Nav>
     )
 }
 

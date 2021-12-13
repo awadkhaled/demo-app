@@ -22,11 +22,15 @@ const Login = () => {
         }
         if (submitClicked) {
             LoginByEmail({ email, password }).then(data => {
-                localStorage.setItem('access_token',data.data.user.access_token)
+                localStorage.setItem('access_token', data.data.user.access_token)
+                console.log(data.data.user.access_token)
             }).catch(err => {
                 console.log(err)
             })
             setSubmitClicked(false)
+            setTimeout(() => {
+                window.location.href = '/'  // Redirect to home page
+            },1000)
         }
     }, [submitClicked])
 
